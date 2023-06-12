@@ -237,6 +237,10 @@ h6 {
   width: calc((100% - 24px * 2) / 3);
 }
 
+.products-item-photo {
+  display: block;
+}
+
 .team {
   background: var(--sec-text-color);
   padding-top: 120px;
