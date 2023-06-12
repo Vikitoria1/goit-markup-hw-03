@@ -30,7 +30,6 @@ h6 {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid rebeccapurple;
 }
 
 .link {
@@ -47,23 +46,13 @@ h6 {
 .header {
   padding-top: 24px;
   padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 24px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-}
-
-.border {
-  border-bottom: 1px solid #e7e9fc;
-  padding-bottom: 24px;
-}
-
-.header-menu {
-  display: flex;
-  max-width: 76;
-  margin-left: 76px;
-  gap: 40px;
 }
 
 .header-navigation {
@@ -82,6 +71,8 @@ h6 {
   color: var(--button-color);
   display: flex;
   align-items: center;
+  margin-right: 76px;
+  
 }
 
 .logo {
@@ -92,12 +83,20 @@ h6 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.header-menu {
+  display: flex;
+  max-width: 76;
+  margin-left: 76px;
+  gap: 40px;
+}
+
 .header-menu-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
+  padding: 24px 0 24px;
 }
 
 .header-menu-link:hover,
@@ -129,11 +128,8 @@ h6 {
 
 /*--MAIN--*/
 .hero {
-  padding-bottom: 120px;
-}
-.hero-container {
+  padding: 188px 0 188px;
   background: var(--main-title-color);
-  padding: 188px 472px 292px 472px;
 }
 
 .hero-title {
@@ -145,6 +141,8 @@ h6 {
   color: var(--background-color);
   max-width: 496px;
   margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-button {
@@ -159,11 +157,28 @@ h6 {
   background: var(--button-color);
   cursor: pointer;
   border: none;
+  display: block;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background: var(--hover-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .benefits {
@@ -173,13 +188,12 @@ h6 {
 
 .benefits-list {
   display: flex;
-  padding-left: 156px;
-  padding-right: 156px;
   gap: 24px;
 }
 
 .benefits-item {
   width: 264px;
+  width: calc((100% - 3 * 24px) / 4);
 }
 
 .benefits-subtitle {
@@ -245,6 +259,16 @@ h6 {
   gap: 24px;
 }
 
+.team-item {
+  background: var(--background-color);
+  width: calc((100 - 24px * 3) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-container {
+  padding: 32px 16px;
+}
+
 .team-subtitle {
   font-weight: 500;
   font-size: 20px;
@@ -252,7 +276,7 @@ h6 {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
-  padding: 32px 49px 8px 49px;
+  margin-bottom: 8px;
 }
 
 .team-text {
@@ -260,11 +284,6 @@ h6 {
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  padding: 8px 52px 32px 52px;
-}
-.team-item {
-  background: var(--background-color);
-  width: calc((100 - 24px * 3) / 4);
 }
 
 /*---FOOTER---*/
@@ -283,6 +302,8 @@ h6 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--button-color);
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-logo:hover,
@@ -299,19 +320,19 @@ h6 {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--sec-text-color);
-  margin-top: 16px;
 }
 
 /*--PORTFOLIO--*/
-.portfolio-container {
+.portfolio-section {
   padding-top: 96px;
   padding-bottom: 120px;
 }
 
 .portfolio-button-list {
   display: flex;
-  margin-bottom: 72px;
   justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
 }
 
 .portfolio-button-link {
@@ -334,6 +355,7 @@ h6 {
   color: var(--background-color);
   background: var(--hover-color);
   border: var(--button-color);
+  border: 1px solid transparent;
 }
 
 .features-list {
@@ -343,7 +365,7 @@ h6 {
 }
 
 .features-item {
-  width: 360px;
+  width: calc((100% - 48px) / 3);
 }
 
 .features-link {
@@ -359,8 +381,8 @@ h6 {
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
-  padding: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
+  border-top: none;
 }
 
 .features-title {
@@ -369,7 +391,7 @@ h6 {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .features-text {
   font-size: 16px;
