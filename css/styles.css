@@ -42,6 +42,10 @@ h6 {
   padding-left: 0;
 }
 
+img {
+  display: block;
+}
+
 /*--HEADER--*/
 .header {
   padding-top: 24px;
@@ -72,7 +76,6 @@ h6 {
   display: flex;
   align-items: center;
   margin-right: 76px;
-  
 }
 
 .logo {
@@ -237,10 +240,7 @@ h6 {
   width: calc((100% - 24px * 2) / 3);
 }
 
-.products-item-photo {
-  display: block;
-}
-
+/*--Team Section--*/
 .team {
   background: var(--sec-text-color);
   padding-top: 120px;
@@ -352,7 +352,7 @@ h6 {
   cursor: pointer;
   border-radius: 4px;
   padding: 12px 24px;
-  margin-right: 24px;
+  
 }
 .portfolio-button-link:hover,
 .portfolio-button-link:focus {
